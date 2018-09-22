@@ -1,7 +1,7 @@
 
 function calculateInsurance () {
 	var name = document.getElementById("name").elements.namedItem("name1").value;
-	if (name.length < 1){
+	/*if (name.length < 1){
 		alert("Add value!-->Name:")
 		return;
 	}
@@ -12,7 +12,7 @@ function calculateInsurance () {
 		}else{
 			alert("Invalid value-->Name: "+name+"\nDo not use space!\nUse only letters!");
 			return;
-		}}
+		}}*/
 	var years = document.getElementById("age").elements.namedItem("age1").value;
 	if(years.length < 1){
 		alert("Add value!-->Age:")
@@ -44,15 +44,15 @@ function calculateInsurance () {
 	if (country1 == "Austria"){
 		var insurance = horse_power1 * 100 / years1 + 50;
 		var result = Math.floor(insurance)
-		document.getElementById("resultbox").innerHTML = "<p>Dear "+name1+" , in " +country1+" , your insurance will be: "+result+"USD.</p>";
+		document.getElementById("resultbox").innerHTML = "<p>Dear "+name+" , in " +country1+" , your insurance will be: "+result+"USD.</p>";
 	}else if (country1 =="Greece") {
 		var insurance = horse_power1 * 150 / (years1 + 3) + 150;
 		var result = Math.floor(insurance)
-		document.getElementById("resultbox").innerHTML = "<p>Dear "+name1+" , in " +country1+" , your insurance will be: "+result+"USD.</p>";
+		document.getElementById("resultbox").innerHTML = "<p>Dear "+name+" , in " +country1+" , your insurance will be: "+result+"USD.</p>";
 	}else if (country1 == "Hungary") {
 		var insurance = horse_power1 * 120 / years1 + 100;
 		var result = Math.floor(insurance)
-		document.getElementById("resultbox").innerHTML = "<p>Dear "+name1+" , in " +country1+" , your insurance will be: "+result+"USD.</p>";
+		document.getElementById("resultbox").innerHTML = "<p>Dear "+name+" , in " +country1+" , your insurance will be: "+result+"USD.</p>";
 	}else {
 		alert("Invalid value!")
 	}
