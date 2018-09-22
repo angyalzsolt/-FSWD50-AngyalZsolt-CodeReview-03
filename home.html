@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CodeReview3 - Team</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<script src="javascript.js"></script>
+	<script src="data.json"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div id="logo1"><a href="https://www.codefactory.wien/de/willkommen-bei-der-codefactory/"><img src="img/logo.png"></a></div>
+			<div id="logo2"><a href="https://www.codefactory.wien/de/willkommen-bei-der-codefactory/"><img src="img/banner.png"></a></div>
+		</div>
+		
+		<div class="navbar">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="home.html">Team</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="bigbox">
+			<div class="topbox">
+				<div class="textbox">
+					<p>Team</p>
+				</div>
+				<div id="members"></div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="lownavbar">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="home.html">Team</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="lowlogo">
+				<a href="https://www.codefactory.wien/de/willkommen-bei-der-codefactory/"><img src="img/logo-inv.png"></a>
+			</div>
+			<p>Angyal Zsolt - CodeFactory 2018</p>
+		</div>
+		
+	</div>
+
+
+
+<script src="data.json"></script>
+<script>
+	var obj = JSON.parse(teamMembers);
+	for(i=0; i < obj.length; i++){
+		document.getElementById("members").innerHTML += "<div class='member'><h2>Name: "+obj[i].name+"</h2><h3>E-mail: "+obj[i].email+"</h3><p><img src='img/person"+(i+1)+".png'></p></div><hr>"
+	}
+</script>
+
+
+
+</body>
+</html>							
